@@ -13,8 +13,6 @@ def alarm():
 while True:
     z_strength = accelerometer.get_z()
     
-    print("z " + str(z_strength)) # for debugging purposes
-    
     if z_strength > 400:
         back = True
     else:
@@ -33,11 +31,3 @@ while True:
             display.clear()
     
     sleep(100)
-
-    
-
-
-
-
-
-
