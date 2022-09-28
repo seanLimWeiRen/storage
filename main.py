@@ -5,7 +5,11 @@ back = False
 front = False
 
 def alarm():
-    display.show(Image.HEART)
+    display.show(Image('99999:'
+                       '99999:'
+                       '99999:'
+                       '99999:'
+                       '99999'))
     music.play(['f#'])
 
 
@@ -31,3 +35,4 @@ while True:
             display.clear()
     
     sleep(100)
+    
