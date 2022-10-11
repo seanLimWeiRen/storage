@@ -12,16 +12,30 @@ def alarm():
                        '99999'))
     music.play(['f#'])
 
+def batteryCheck():
+    display.show(Image('90909:'
+                       '09090:'
+                       '90909:'
+                       '09090:'
+                       '90909'))
+    sleep(200)
+    display.clear()
+
 
 
 while True:
     z_strength = accelerometer.get_z()
+
+    if button_a.was_pressed():
+        batteryCheck()
+    if button_b.was_pressed():
+        batteryCheck()
     
-    if z_strength > 400:
+    if z_strength > 500:
         back = True
     else:
         back = False
-    if z_strength < -400:
+    if z_strength < -500:
         front = True
     else:
         front = False
