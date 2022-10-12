@@ -3,6 +3,8 @@ import music
 
 back = False
 front = False
+backTriggerPoint = 600 # Must be positive number
+frontTriggerPoint = -500 # Must be negative number
 
 def alarm():
     display.show(Image('99999:'
@@ -31,11 +33,11 @@ while True:
     if button_b.was_pressed():
         batteryCheck()
     
-    if z_strength > 500:
+    if z_strength > backTriggerPoint:
         back = True
     else:
         back = False
-    if z_strength < -500:
+    if z_strength < frontTriggerPoint:
         front = True
     else:
         front = False
