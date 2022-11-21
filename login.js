@@ -21,7 +21,7 @@ function validate(a) {
     xhr.onload = (e) => {
         // console.log("Received Response!")
         console.log(e)
-        if (e.currentTarget.status == 401) {
+        if (e.currentTarget.status == 291) {
             document.getElementById('error').innerHTML = `Error: ${e.currentTarget.response}`
         } else {
             document.getElementById('flag').innerHTML = `WOW!: ${e.currentTarget.response}`
